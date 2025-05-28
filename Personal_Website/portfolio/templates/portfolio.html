@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+    {% block title %}
+    About
+    {% endblock %}
+
+    {% block header %}<h1>Portfolio<h1>{% endblock %}
+
+
+    {% block main %}
+    <!--AI Helped refine arguments for a lot of divs used here-->
+    <div class="container text-center">
+        {% for dictionary_row, dictionary_data in portfolioInfo.items() %}
+        <div class="row justify-content-center mb-4">
+            {% for category, text in dictionary_data.items() %}
+            <div class="col-md-5 col-lg-4 mb-3 d-flex justify-content-center">
+                <!--https://getbootstrap.com/docs/5.3/components/card/#images = src-->
+                <div class="card w-100 h-100" style="width;">
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h3>{{ category }}</h3>
+                    <p class="card-text" style="white-space: pre-line;">
+                        {{ text }}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+        {% endfor %}
+    </div>
+    {% endblock %}

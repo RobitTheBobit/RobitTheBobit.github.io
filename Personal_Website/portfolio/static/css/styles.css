@@ -1,0 +1,10 @@
+/* https://pqina.nl/blog/flipping-images-with-css-and-javascript = src for this helpful funct */
+.xFlipImg {
+    /* flip horizontally */
+    transform: scaleX(-1);
+}
+
+/*CHATGPT Contribution*/
+.content-wrapper {
+  padding-bottom: 100px; /* or whatever your footer height is */
+}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+    {% block title %}
+    About
+    {% endblock %}
+
+    {% block header %}<h1>About Me<h1>{% endblock %}
+
+
+    {% block main %}
+    <div class="container text-center">
+        {% for dictionary_row, dictionary_data in aboutInfo.items() %}  <!-- SUBSTANTIAL UPGRADE, AI HELPED-->
+        <div class="row">
+            {% for category, items in dictionary_data.items() %}
+            <div class="col text-center">
+                <h3>{{ category }}</h3>
+                <ul class="list-unstyled">
+                    {% for item in items %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}                                    <!-- END OF SUBSTANTIAL UPGRADE-->
+    </div>
+    {% endblock %}

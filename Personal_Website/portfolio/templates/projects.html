@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+    {% block title %}
+    About
+    {% endblock %}
+
+    {% block header %}<h1>Projects<h1>{% endblock %}
+
+
+    {% block main %}
+    <div class="container text-center w-50">
+        {% for dictionary_row, dictionary_data in projectsInfo.items() %}  <!-- SUBSTANTIAL UPGRADE, AI HELPED-->
+        {% for category, text in dictionary_data.items() %}
+        <div class="row">
+            <div class="col text-center">
+                <h3>{{ category }}</h3>
+                <p style="white-space: pre-line; word-wrap: break-word; overflow-wrap: break-word;"> <!-- AI suggested these arguments -->
+                    {{ text }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+        {% endfor %}                                    <!-- END OF SUBSTANTIAL UPGRADE-->
+    </div>
+    {% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+    {% block title %}
+    Homepage
+    {% endblock %}
+
+    {% block header %}<h1>Matt's Homepage</h1>{% endblock %}
+
+
+    {% block main %}
+    <div class="container-fluid content-wrapper">
+        <div class="row">
+            <div class="col">
+                <img class="border border-dark img-fluid" src="/static/images/Mrbuba.jfif" alt="Picture of Matt's pet corgi.">
+            </div>
+            <div class="col">
+                <p class="text-center">
+                Hello! This is my first ever website! I built this website using a combination of tools <br>
+                that you can read about in the portfolio section of my website!<br><br>
+
+                I just wanted to say that I am absolutely thrilled to see you here! I am really glad that this<br>
+                personal project has gotten at least some usage outside of my testing it.<br><br>
+
+                You can find this website's source code on my github page (see the footer). I hope that the code isn't too sucky.<br><br>
+
+                Anywho, I hope that you have a good day! Thank you for visiting my website stranger!!!
+                </p>
+            </div>
+            <div class="xFlipImg col">
+                <img class="border border-dark img-fluid" src="/static/images/Mrbuba.jfif" alt="Picture of Matt's pet corgi fliped over the y-axis.">
+            </div>
+        </div>
+    {% endblock %}
